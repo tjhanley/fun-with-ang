@@ -1,0 +1,8 @@
+{
+  "name": "ang-invoice",
+  "description": "A starter project for AngularJS",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0"
+  }
+}
