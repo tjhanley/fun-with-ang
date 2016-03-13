@@ -7,11 +7,7 @@
  * # MainCtrl
  * Controller of the angInvoiceApp
  */
-angular.module('angInvoiceApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  app.controller('MainCtrl', ["$scope", "invoices",
+    function ($scope, invoices) {
+      $scope.invoices = invoices;
+  }]);

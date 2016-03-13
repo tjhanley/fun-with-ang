@@ -1,3 +1,16 @@
-<div class="jumbotron">
-  <h1>Tom's Invoices</h1>
+<h1>Invoices</h1>
+
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+      <th>Created At</th>
+      <th>Vendor</th>
+      <th>Description</th>
+    </tr>
+    <tr ng-repeat="invoice in invoices">
+      <td>{{invoice.date | date:'yyyy-MM-dd HH:mm:ss Z' }}</td>
+      <td>{{invoice.vendor}}</td>
+      <td>{{invoice.description}}</td>
+    </tr>
+  </table>
 </div>

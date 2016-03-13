@@ -1,1 +1,11 @@
-<p>This is the Invoice Add view.</p>
+<form ng-submit="addInvoice()">
+  <div class="form-group">
+    <label for="vendor">Vendor</label>
+    <input type="text" class="form-control" id="vendor" placeholder="Vendor" ng-model="vendor">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" id="description" placeholder="Description" ng-model="description">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

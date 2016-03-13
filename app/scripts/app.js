@@ -8,14 +8,15 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('angInvoiceApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -33,3 +34,13 @@ angular
         redirectTo: '/'
       });
   });
+
+app.factory("invoices", ["$firebaseArray",
+  function($firebaseArray) {
+    // create a reference to the database location where we will store our data
+    var ref = new Firebase("https://scorching-heat-308.firebaseio.com/invoices");
+
+    // this uses AngularFire to create the synchronized array
+    return $firebaseArray(ref);
+  }
+]);
