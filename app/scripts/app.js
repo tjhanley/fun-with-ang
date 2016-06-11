@@ -30,6 +30,11 @@ var app = angular
         controller: 'InvoiceCtrl',
         controllerAs: 'invoice'
       })
+      .when('/tree',{
+        templateUrl: 'views/tree.html',
+        controller: 'TreeCtrl',
+        controllerAs: 'tree'
+      })
       .otherwise({
         redirectTo: '/'
       });

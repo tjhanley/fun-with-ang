@@ -19,8 +19,7 @@
 
       $scope.removeLineItem = function(index){
         $scope.lineItems.splice(index,1);
-      }
-
+      };
       $scope.addInvoice = function(){
         $scope.invoices = invoices;
         $scope.invoices.$add({
