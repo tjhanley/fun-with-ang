@@ -17,7 +17,7 @@ describe('Controller: InvoiceCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(InvoiceCtrl.awesomeThings.length).toBe(3);
+  it('should attach a list of lineItems to the scope', function () {
+    expect(InvoiceCtrl.lineItems.length).toBe(3);
   });
 });
